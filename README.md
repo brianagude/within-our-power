@@ -2,12 +2,16 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+# Following this tutorial
+[https://www.storyblok.com/tp/nextjs-headless-cms-ultimate-tutorial](https://www.storyblok.com/tp/nextjs-headless-cms-ultimate-tutorial)
+
 First, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
+local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
