@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-# Following this tutorial
+Following this tutorial
 [https://www.storyblok.com/tp/nextjs-headless-cms-ultimate-tutorial](https://www.storyblok.com/tp/nextjs-headless-cms-ultimate-tutorial)
 
 First, run the development server:
