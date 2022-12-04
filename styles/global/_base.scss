@@ -1,0 +1,46 @@
+* {
+  font-family: $font-text;
+  box-sizing: border-box;
+  transition: ease 0.2s all;
+  scroll-behavior: smooth;
+  --scrollto-offset: 90px;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: $white;
+  background-color: $cream;
+}
+
+body {
+  font-family: $font-text;
+  font-size: $base-unit;
+  color: $black;
+  background: $cream;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+b {
+  font-weight: bold;
+}
+
+u {
+  text-decoration: underline;
+}
+
+button {
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

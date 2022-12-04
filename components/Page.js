@@ -1,5 +1,5 @@
 import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
- 
+
 const Page = ({ blok }) => (
   <main {...storyblokEditable(blok)}>
     {blok.body.map((nestedBlok) => (

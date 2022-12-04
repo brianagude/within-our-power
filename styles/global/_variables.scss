@@ -1,0 +1,24 @@
+// colors -----------------------------------------------------------------------------------------------------
+$black: #040604;
+$gray: #D1D1D1;
+$white: #fff;
+
+$salmon: #E29276;
+$pink: #FFCACC;
+$brown: #AF9F5D;
+$green: #89A37E;
+$cream: #F9F6E2;
+
+// helpers ------
+$standard-border: 4px solid #612814;
+
+// screen widths -----------------------------------------------------------------------------------------------------
+$screen-xs-min: 424px !default;
+$screen-sm-min: 768px !default;
+$screen-md-min: 1024px !default;
+$screen-lg-min: 1280px !default;
+$screen-xl-min: 1440px !default;
+$screen-xxl-min: 1920px !default;
+
+// helpers -----------------------------------------------------------------------------------------------------
+$base-unit: 16px;

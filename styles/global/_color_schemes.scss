@@ -1,0 +1,47 @@
+.primary-theme {
+  background-color: #E29276;
+  border-color: #C6522A;
+
+  h1, h2, h3, h4, h5, h6, p, small, a, li {
+    color: #612814;
+  }
+}
+
+.secondary-theme {
+  background-color: #AF9F5D;
+  border-color: #716638;
+
+  h1, h2, h3, h4, h5, h6, p, small, a, li {
+    color: #0A0905;
+  }
+
+  .btn {
+    border-color: #716638;
+  }
+}
+
+.primary-light-theme {
+  background-color: #FFCACC;
+  border-color: #FF999D;
+
+  h1, h2, h3, h4, h5, h6, p, small, a, li {
+    color: #9C4121;
+  }
+
+  .btn {
+    border-color: #FF999D;
+  }
+}
+
+.tertiary-theme {
+  background-color: #89A37E;
+  border-color: #586E4F;
+
+  h1, h2, h3, h4, h5, h6, p, small, a, li {
+    color: #283224;
+  }
+
+  .btn {
+    border-color: #586E4F;
+  }
+}

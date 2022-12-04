@@ -1,0 +1,80 @@
+.default-layout > main {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  padding: 16px;
+  gap: 24px;
+
+  @include bp(sm) {
+    padding: 32px;
+    gap: 24px;
+  }
+
+  @include bp(lg) {
+    padding: 48px;
+    gap: 40px;
+  }
+}
+
+section {
+  padding: 40px 0;
+  border-radius: 40px;
+  border: $standard-border;
+
+  @include bp(sm) {
+    padding: 32px 0;
+  }
+
+  @include bp(md) {
+    padding: 48px 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    @include bp(sm) {
+      padding: 0 32px;
+    }
+
+    @include bp(md) {
+      padding: 0 32px;
+    }
+  }
+}
+
+.cta-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.btn {
+  display: block;
+  background: #F9F6E2;
+  border: 2px solid #612814;
+  border-radius: 40px;
+  padding: 12px 40px;
+  text-align: center;
+  font-weight: 700;
+  font-family: $font-text;
+  font-size: 18px;
+  line-height: 1.33;
+  color: #612814;
+
+  &:hover {
+    background: darken($cream, 5%);
+  }
+}
+
+.btn-fine-print p {
+  text-align: left;
+  font-family: $font-text;
+  font-size: 14px;
+  line-height: 1.33;
+}

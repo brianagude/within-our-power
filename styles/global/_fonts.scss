@@ -1,0 +1,109 @@
+$font-display: 'Raleway', 'Times New Roman', sans-serif;
+$font-text: 'Montserrat', 'Times New Roman', sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+small p {
+  font-family: $font-display;
+}
+
+p {
+  font-family: $font-text;
+}
+
+
+h1,
+.h1 {
+  font-size: 40px;
+  line-height: 1.2;
+
+  &+h2,
+  &+h3,
+  &+p,
+  &+small {
+    margin-top: 8px;
+  }
+
+  @include bp(md) {
+    font-size: 48px;
+    line-height: 1.33;
+  }
+
+  @include bp(lg) {
+    font-size: 64px;
+    line-height: 1.25;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+
+  &+h3 {
+    margin-top: 8px;
+  }
+
+  &+p,
+  &+small {
+    margin-top: 16px;
+  }
+
+  @include bp(md) {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  @include bp(lg) {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 16px;
+  line-height: 1.5;
+
+  @include bp(sm) {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  @include bp(md) {
+    font-size: 24px;
+  }
+}
+
+p,
+input,
+select,
+textarea,
+label {
+  font-size: 16px;
+  line-height: 1.5;
+
+  @include bp(md) {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  @include bp(lg) {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+}
+
+small,
+small p {
+  font-size: 12px;
+  line-height: 1.2;
+  display: block;
+}
