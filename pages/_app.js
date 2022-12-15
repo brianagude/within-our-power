@@ -2,10 +2,10 @@ import '../styles/globals.scss'
 import { storyblokInit, apiPlugin } from "@storyblok/react";
 import Config from '../components/Config';
 import Page from '../components/Page';
-import Grid from '../components/Grid';
+import Wrapper from '../components/Wrapper';
 import Teaser from '../components/Teaser';
 import Feature from '../components/Feature';
-import HeaderMenu from '../components/HeaderMenu';
+import Header from '../components/Header';
 import MenuLink from '../components/MenuLink';
 import TextBlock from '../components/TextBlock';
 import ImageCarousel from '../components/ImageCarousel';
@@ -17,14 +17,15 @@ import Form from '../components/Form';
 import FormInput from '../components/FormInput';
 import BlogCarousel from '../components/BlogCarousel';
 import BlogItem from '../components/BlogItem';
+import Footer from '../components/Footer';
 
 const components = {
   feature: Feature,
-  grid: Grid,
+  wrapper: Wrapper,
   teaser: Teaser,
   page: Page,
   config: Config,
-  header_menu: HeaderMenu,
+  header: Header,
   menu_link: MenuLink,
   text_block: TextBlock,
   image_carousel: ImageCarousel,
@@ -35,7 +36,8 @@ const components = {
   form: Form,
   form_input: FormInput,
   blog_carousel: BlogCarousel,
-  blog_item: BlogItem
+  blog_item: BlogItem,
+  footer: Footer
 };
 
  storyblokInit({

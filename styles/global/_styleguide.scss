@@ -1,13 +1,15 @@
+/* DEFAULT STYLES ======================================================================================== */
 .default-layout > main {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
+  position: relative;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
+  max-width: 1440px;
+  margin: 90px auto 0;
 
   @include bp(sm) {
     padding: 32px;
-    gap: 24px;
   }
 
   @include bp(lg) {
@@ -15,6 +17,35 @@
     gap: 40px;
   }
 }
+
+/* HEADER STYLES ======================================================================================== */
+header {
+  background: #F5EFCC;
+  padding: 16px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  .container {
+    padding: 0 16px;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    // justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo { width: 124px; }
+  .menu-toggle {
+    img {
+      width: 32px;
+    }
+  }
+}
+/* SECTION STYLES ======================================================================================== */
 
 section {
   padding: 40px 0;
@@ -36,22 +67,95 @@ section {
     width: 100%;
     margin: 0 auto;
     padding: 0 16px;
+    gap: 24px;
 
     @include bp(sm) {
       padding: 0 32px;
+      gap: 32px;
     }
 
     @include bp(md) {
       padding: 0 32px;
     }
   }
+
+  .text-block { 
+    max-width: 720px; 
+    margin: 0 auto;
+  }
+
+  &.max-width {
+    .container {
+      max-width: 768px; 
+    }
+  }
+
+  &.hero-section {
+    padding-bottom: 0;
+
+    .text-block {
+      @include bp(md){ text-align: center; }
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 1.25;
+
+      @include bp(sm){
+        font-size: 48px;
+        line-height: 1.33;
+      }
+
+      @include bp(md){
+        font-size: 48px;
+      }
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 1.25;
+    
+      @include bp(sm) {
+        font-size: 32px;
+        line-height: 1.33;
+      }
+    }
+  }
 }
+
+/* WRAPPER STYLES ======================================================================================== */
+
+.wrapper-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 24px;
+
+  @include bp(md){
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include bp(lg){
+    grid-gap: 40px;
+  }
+}
+
+/* BUTTON STYLES ======================================================================================== */
 
 .cta-block {
   display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-fine-print {
+  margin-top: 0 !important;
+  text-align: center !important;
+  width: 100%;
+
+  p { text-align: center !important; }
 }
 
 .btn {
@@ -67,6 +171,8 @@ section {
   line-height: 1.33;
   color: #612814;
 
+  @include bp(mobile-only) { width: 100%; }
+
   &:hover {
     background: darken($cream, 5%);
   }
@@ -77,4 +183,151 @@ section {
   font-family: $font-text;
   font-size: 14px;
   line-height: 1.33;
+}
+
+/* FORM STYLES ======================================================================================== */
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+
+  @include bp(sm){
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    grid-column: 1 / -1;
+
+    &.half-width {
+      grid-column: initial;
+    }
+  }
+
+  label {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  input,
+  textarea {
+    background: #FFEBEB;
+    border: 1px solid #9C4121;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: left;
+      opacity: 80%;
+    }
+  }
+
+  textarea {
+    min-height: 10rem;
+  }
+
+  button {
+    grid-column: 1 / -1;
+
+    @include bp(xs){
+      width: fit-content;
+      margin: 0 auto;
+
+    }
+  }
+}
+
+/* ACCORDION STYLES ======================================================================================== */
+
+.accordion {
+  width: 100%;
+  margin: 0 auto;
+
+  &-item {
+    & + .accordion-item { margin-top: 8px; }
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &-title {
+    background: #EAAF9A;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 16px;
+    grid-gap: 12px;
+    align-items: center;
+    padding: 16px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33;
+
+    &:hover {
+      cursor: pointer;
+      background: #F6DED5;
+    }
+
+    @include bp(sm){
+      grid-template-columns: 1fr 24px;
+      
+    }
+
+    @include bp(md){
+      font-size: 24px;
+    }
+  }
+
+  &-content {
+    background: #F6DED5;
+    border-radius: 8px;
+    padding: 16px;
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}
+
+/* BLOG STYLES ======================================================================================== */
+
+.blog-carousel {
+  .slick-track {
+    width: 100% !important; 
+    gap: 16px;
+  }
+}
+
+.blog-item {
+  border: 3px solid #586E4F;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #F9F6E2;
+
+  img {
+    display: block;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.blog-title {
+  border-top: 2px solid #586E4F;
+  padding: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @include bp(md){
+    font-size: 24px;
+    line-height: 1.33;
+  }
 }

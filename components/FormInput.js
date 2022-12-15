@@ -2,7 +2,7 @@ import { storyblokEditable } from "@storyblok/react";
  
 const Form = ({ blok }) => {
   return (
-    <div className={"input-wrapper " + blok.half_width && 'half-width'} {...storyblokEditable(blok)}>
+    <div className={"input-wrapper " + (blok.half_width && 'half-width')} {...storyblokEditable(blok)}>
       <label 
         for={blok.input_id} 
         class={blok.hide_label && "visually-hidden"}

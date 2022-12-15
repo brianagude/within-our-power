@@ -10,7 +10,7 @@ const Form = ({ blok }) => {
       {blok.form_inputs.map((nestedBlok) => (
         <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
       ))}
-      <button type="submit">{blok.submit_text}</button>
+      <button type="submit" class="btn">{blok.submit_text}</button>
     </form>
   );
 };

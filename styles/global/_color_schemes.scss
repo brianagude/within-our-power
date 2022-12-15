@@ -5,6 +5,22 @@
   h1, h2, h3, h4, h5, h6, p, small, a, li {
     color: #612814;
   }
+
+  form {
+    label {
+      color: #612814;
+    }
+
+    input,
+    textarea {
+      background: #FBEEEA;
+      border: 1px solid #612814;
+
+      &::placeholder {
+        color: #612814;
+      }
+    }
+  }
 }
 
 .secondary-theme {
@@ -17,6 +33,23 @@
 
   .btn {
     border-color: #716638;
+    color: #0A0905;
+  }
+
+  form {
+    label {
+      color: #0A0905;
+    }
+
+    input,
+    textarea {
+      background: #E2DDC5;
+      border: 1px solid #0A0905;
+
+      &::placeholder {
+        color: #0A0905;
+      }
+    }
   }
 }
 
@@ -30,6 +63,21 @@
 
   .btn {
     border-color: #FF999D;
+    color: #9C4121;
+  }
+
+  form {
+    label { color: #9C4121; }
+
+    input,
+    textarea {
+      background: #FFEBEB;
+      border: 1px solid #9C4121;
+
+      &::placeholder {
+        color: #9C4121;
+      }
+    }
   }
 }
 
@@ -43,5 +91,22 @@
 
   .btn {
     border-color: #586E4F;
+    color: #283224;
+  }
+
+  form {
+    label {
+      color: #283224;
+    }
+
+    input,
+    textarea {
+      background: #F9F6E2;
+      border: 1px solid #283224;
+
+      &::placeholder {
+        color: #283224;
+      }
+    }
   }
 }

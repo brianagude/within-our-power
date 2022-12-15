@@ -9,27 +9,29 @@ const ImageCarousel = ({ blok }) => {
     arrows: true,
     infinite: true,
     slidesToScroll: 1,
-    slidesToShow: 4,
+    slidesToShow: 6,
     mobileFirst: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1023,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           infinite: true,
         }
       },
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 2
         }
       }
     ]
   };
 
   return (
-    <div {...storyblokEditable(blok)} className={"images-carousel" + (blok.hide_navigation && 'hide-navigation')}>
+    <div {...storyblokEditable(blok)} className={"images-carousel" + (blok.hide_navigation && ' hide-navigation')}>
       <Slider {...settings}>
         {blok.images.map((nestedBlok) => (
           <div className="carousel-image" key={nestedBlok.id}>

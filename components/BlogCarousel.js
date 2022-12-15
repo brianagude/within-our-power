@@ -9,14 +9,12 @@ const BlogCarousel = ({ blok }) => {
     arrows: true,
     infinite: true,
     slidesToScroll: 1,
-    slidesToShow: 4,
-    mobileFirst: true,
+    slidesToShow: 1,
     responsive: [
       {
         breakpoint: 1023,
         settings: {
-          slidesToShow: 2,
-          infinite: true,
+          slidesToShow: 1
         }
       },
       {
@@ -29,7 +27,7 @@ const BlogCarousel = ({ blok }) => {
   };
 
   return (
-    <div {...storyblokEditable(blok)} className={"blog-carousel" + (blok.hide_navigation && 'hide-navigation')}>
+    <div {...storyblokEditable(blok)} className={"blog-carousel" + (blok.hide_navigation ? 'hide-navigation' : '')}>
       <Slider {...settings}>
         {blok.blog_items.map((nestedBlok) => (
           <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />

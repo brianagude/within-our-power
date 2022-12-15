@@ -1,13 +1,13 @@
 import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
  
-const Grid = ({ blok }) => {
+const Wrapper = ({ blok }) => {
   return (
-    <div className="grid" {...storyblokEditable(blok)}>
-      {blok.columns.map((nestedBlok) => (
+    <div className="wrapper-section" {...storyblokEditable(blok)}>
+      {blok.wrapped_items.map((nestedBlok) => (
         <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
       ))}
     </div>
   );
 };
  
-export default Grid;
+export default Wrapper;

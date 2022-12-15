@@ -4,7 +4,7 @@ import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
  
 const Section = ({ blok }) => {
   return (
-    <section {...storyblokEditable(blok)} className={"page-section " + blok.theme + '-theme '} id={blok.id}>
+    <section {...storyblokEditable(blok)} className={"page-section " + blok.theme + "-theme " + (blok.hero_section ? "hero-section" : '') + (blok.max_width ? "max-width" : '')} id={blok.id}>
       <div className="container">
         {blok.content.map((nestedBlok) => (
           <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />

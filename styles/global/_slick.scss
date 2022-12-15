@@ -2,6 +2,16 @@
   .slick-dots, .slick-next, .slick-prev { display: none !important; }
 }
 
+.slick-track {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+
+  @include bp(sm){ gap: 40px; }
+}
+
+.slick-slide > div { display: flex; }
+
 .slick-dots {
   display: flex !important;
   align-items: center;
