@@ -8,13 +8,18 @@ const BlogCarousel = ({ blok }) => {
     dots: true,
     arrows: true,
     infinite: true,
-    slidesToScroll: 1,
-    slidesToShow: 1,
+    slidesToShow: 4,
     responsive: [
+      {
+        breakpoint: 1439,
+        settings: {
+          slidesToShow: 4
+        }
+      },
       {
         breakpoint: 1023,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 2
         }
       },
       {

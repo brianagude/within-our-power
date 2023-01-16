@@ -19,9 +19,7 @@ p {
   font-family: $font-text;
 
   &.lead { margin-top: 16px; }
-
   & + p, & + small { margin-top: 8px; }
- 
 }
 
 
