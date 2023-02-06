@@ -18,6 +18,7 @@ import FormInput from '../components/FormInput';
 import BlogCarousel from '../components/BlogCarousel';
 import BlogItem from '../components/BlogItem';
 import Footer from '../components/Footer';
+import Image from '../components/Image';
 
 const components = {
   feature: Feature,
@@ -26,6 +27,7 @@ const components = {
   page: Page,
   config: Config,
   header: Header,
+  image: Image,
   menu_link: MenuLink,
   text_block: TextBlock,
   image_carousel: ImageCarousel,
