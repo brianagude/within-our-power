@@ -7,21 +7,9 @@ const BlogCarousel = ({ blok }) => {
   const settings = {
     dots: true,
     arrows: true,
-    infinite: true,
-    slidesToShow: 4,
+    infinite: false,
+    slidesToShow: 3,
     responsive: [
-      {
-        breakpoint: 1439,
-        settings: {
-          slidesToShow: 4
-        }
-      },
-      {
-        breakpoint: 1023,
-        settings: {
-          slidesToShow: 2
-        }
-      },
       {
         breakpoint: 767,
         settings: {

@@ -1,0 +1,11 @@
+.blog-carousel {
+  .slick-list {
+    display: flex;
+  }
+
+  .slick-slide {
+    flex: 1;
+    height: 100%;
+    display: flex;
+  }
+}
